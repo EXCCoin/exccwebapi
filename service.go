@@ -154,104 +154,22 @@ func NewService() *Service {
 		Mutex:  sync.RWMutex{},
 
 		Vsps: vspSet{
-			"dcrvsp.dittrex.com": Vsp{
+			"vspd.excc.co": Vsp{
 				Network:  "mainnet",
-				Launched: getUnixTime(2021, 4, 7),
+				Launched: getUnixTime(2023, 4, 7),
 			},
-			"teststakepool.decred.org": Vsp{
+			"testnet-vspd.excc.co": Vsp{
 				Network:  "testnet",
-				Launched: getUnixTime(2020, 6, 1),
-			},
-			"testnet-vsp.jholdstock.uk": Vsp{
-				Network:  "testnet",
-				Launched: getUnixTime(2021, 1, 20),
-			},
-			"dcrvsp.ubiqsmart.com": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2020, 12, 25),
-			},
-			"stakey.net": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2020, 10, 22),
-			},
-			"vsp.stakeminer.com": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2020, 11, 9),
-			},
-			"vsp.decredcommunity.org": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2020, 11, 05),
-			},
-			"vspd.99split.com": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2020, 11, 17),
-			},
-			"vspd.decredbrasil.com": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2020, 11, 22),
-			},
-			"ultravsp.uk": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2020, 12, 1),
-			},
-			"vsp.dcr.farm": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2020, 12, 9),
-			},
-			"dcrpool.ibitlin.com": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2021, 1, 13),
-			},
-			"decredvoting.com": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2021, 2, 1),
-			},
-			"vsp.coinmine.pl": Vsp{
-				Network:  "mainnet",
-				Launched: getUnixTime(2021, 1, 28),
-			},
-			"123.dcr.rocks": {
-				Network:  "mainnet",
-				Launched: getUnixTime(2021, 4, 28),
-			},
-			"big.decred.energy": {
-				Network:  "mainnet",
-				Launched: getUnixTime(2022, 5, 1),
-			},
-			"dcrhive.com": {
-				Network:  "mainnet",
-				Launched: getUnixTime(2022, 6, 23),
-			},
-			"vspd.bass.cf": {
-				Network:  "mainnet",
-				Launched: getUnixTime(2022, 5, 1),
+				Launched: getUnixTime(2023, 4, 7),
 			},
 		},
 
-		// Historical launch dates have been collected from these sources:
-		//   - https://github.com/decred/dcrwebapi/commit/09113670a5b411c9c0c988e5a8ea627ee00ac007
-		//   - https://forum.decred.org/threads/ultrapool-eu-new-stakepool.5276/#post-25188
-		//   - https://decred.slack.com/
-		//   - https://github.com/decred/dcrwebapi/commit/9374b388624ad2b3f587d3effef39fc752d892ec
-		//   - https://github.com/decred/dcrwebapi/commit/e76f621d33050a506ab733ff2bc2f47f9366726c
 		Stakepools: StakepoolSet{
 			"Delta": {
 				APIVersionsSupported: []interface{}{},
 				Network:              "mainnet",
-				URL:                  "https://dcr.stakeminer.com",
-				Launched:             getUnixTime(2016, 5, 19),
-			},
-			"Hotel": {
-				APIVersionsSupported: []interface{}{},
-				Network:              "mainnet",
-				URL:                  "https://stake.decredbrasil.com",
-				Launched:             getUnixTime(2016, 5, 28),
-			},
-			"Zeta": {
-				APIVersionsSupported: []interface{}{},
-				Network:              "mainnet",
-				URL:                  "https://dcrstake.coinmine.pl",
-				Launched:             getUnixTime(2018, 10, 22),
+				URL:                  "https://stakepool.excc.co",
+				Launched:             getUnixTime(2018, 3, 12),
 			},
 		},
 	}
@@ -285,7 +203,7 @@ func (service *Service) getHTTP(url string) ([]byte, error) {
 			url, err)
 	}
 
-	req.Header.Set("User-Agent", "decred/dcrweb bot")
+	req.Header.Set("User-Agent", "exccoin/exccweb bot")
 	poolResp, err := service.HTTPClient.Do(req)
 	if err != nil {
 		return nil, fmt.Errorf("%v: failed to send request: %v",

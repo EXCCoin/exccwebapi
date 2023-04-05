@@ -5,29 +5,34 @@ API calls are requested by providing the name of the call as a form parameter.
 For example, to request the `vsp` call:
 
 ```no-highlight
-https://api.decred.org/?c=vsp
+https://api.excc.co/?c=vsp
 ```
 
 ## Get VSP Info
 
 Collects data from a hard-coded list of Voting Service Providers running
-[decred/vspd](https://github.com/decred/vspd).
+[EXCCoin/vspd](https://github.com/EXCCoin/vspd).
 
-Example: <https://api.decred.org/?c=vsp>
+Example: <https://api.excc.co/?c=vsp>
 
 ```json
 {
-    "teststakepool.decred.org": {
-        "network": "testnet",
-        "launched": 1590969600,
-        "lastupdated": 1596615074,
-        "apiversions": [3],
-        "feepercentage": 5,
-        "closed": false,
-        "voting": 3935,
-        "voted": 57073,
-        "revoked": 83
-    },
+  "testnet-vspd.excc.co": {
+    "network": "testnet",
+    "launched": 1680825600,
+    "lastupdated": 1680693159,
+    "apiversions": [
+      3
+    ],
+    "feepercentage": 3,
+    "closed": false,
+    "voting": 0,
+    "voted": 5,
+    "revoked": 0,
+    "vspdversion": "1.2.0-pre+98d3d3a55",
+    "blockheight": 41399,
+    "estimatednetworkproportion": 0
+  }
 }
 ```
 
@@ -43,8 +48,8 @@ Example: <https://api.decred.org/?c=gsd>
     "Alpha":{
         "APIEnabled":true,
         "APIVersionsSupported":[1, 2],
-        "Network":"testnet",
-        "URL":"https://teststakepool.decred.org",
+        "Network":"mainnet",
+        "URL":"https://stakepool.excc.co",
         "Launched":1516579200,
         "LastUpdated":1598266266,
         "Immature":0,

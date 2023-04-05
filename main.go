@@ -18,7 +18,7 @@ const (
 
 func main() {
 	service := NewService()
-	log.Println("dcrwebapi starting on", defaultPort)
+	log.Println("exccwebapi starting on", defaultPort)
 
 	origins := handlers.AllowedOrigins([]string{"*"})
 	methods := handlers.AllowedMethods([]string{"GET", "OPTIONS"})

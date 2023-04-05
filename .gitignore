@@ -1,8 +1,9 @@
 *.exe
 tmp
+exccwebapi
 dcrwebapi
 .DS_Store
-vendor/ 
+vendor/
 .vscode/
 .idea/
 
