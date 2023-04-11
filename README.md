@@ -16,8 +16,8 @@ Data from exccwebapi is used to populate the VSP list of both
 [Exilibrium](https://github.com/EXCCoin/exilibrium).
 
 To add a new VSP to the API, VSP operators must open a pull request on this
-respository after following the [operator guidelines](https://docs.excc.co/advanced/operating-a-vsp/)
-and coordinating with the [Decred community](https://excc.co/community/).
+repository after following the [operator guidelines](https://docs.excc.co/advanced/operating-a-vsp/)
+and coordinating with the [ExchangeCoin community](https://excc.co/community/).
 
 ## API
 

@@ -39,9 +39,9 @@ Example: <https://api.excc.co/?c=vsp>
 ## Get VSP Info (legacy)
 
 Collects data from a hard-coded list of Voting Service Providers running
-[decred/dcrstakepool](https://github.com/decred/dcrstakepool).
+[EXCCoin/exccstakepool](https://github.com/EXCCoin/exccstakepool).
 
-Example: <https://api.decred.org/?c=gsd>
+Example: <https://api.excc.co/?c=gsd>
 
 ```json
 {
