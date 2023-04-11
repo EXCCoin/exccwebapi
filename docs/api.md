@@ -17,7 +17,7 @@ Example: <https://api.excc.co/?c=vsp>
 
 ```json
 {
-  "testnet-vspd.excc.co": {
+  "testnet-vsp.excc.co": {
     "network": "testnet",
     "launched": 1680825600,
     "lastupdated": 1680693159,

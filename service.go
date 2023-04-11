@@ -154,11 +154,11 @@ func NewService() *Service {
 		Mutex:  sync.RWMutex{},
 
 		Vsps: vspSet{
-			"vspd.excc.co": Vsp{
+			"vsp.excc.co": Vsp{
 				Network:  "mainnet",
 				Launched: getUnixTime(2023, 4, 7),
 			},
-			"testnet-vspd.excc.co": Vsp{
+			"testnet-vsp.excc.co": Vsp{
 				Network:  "testnet",
 				Launched: getUnixTime(2023, 4, 7),
 			},
